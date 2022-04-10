@@ -1,0 +1,24 @@
+# permissions for end users to edit litetests.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: litetest-editor-role
+rules:
+- apiGroups:
+  - test.ability.app
+  resources:
+  - litetests
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - test.ability.app
+  resources:
+  - litetests/status
+  verbs:
+  - get

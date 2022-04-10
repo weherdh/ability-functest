@@ -1,0 +1,19 @@
+domain: ability.app
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: ability-functest
+repo: github.com/weherdh/ability-functest
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: ability.app
+  group: test
+  kind: LiteTest
+  path: github.com/weherdh/ability-functest/api/v1
+  version: v1
+version: "3"

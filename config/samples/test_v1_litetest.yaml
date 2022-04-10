@@ -1,0 +1,6 @@
+apiVersion: test.ability.app/v1
+kind: LiteTest
+metadata:
+  name: litetest-sample
+spec:
+  # TODO(user): Add fields here
